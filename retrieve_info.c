@@ -63,9 +63,9 @@ void set_info(info_t *info, char **args_vector)
 				info->argv[1] = NULL;
 			}
 		}
-		for (index = 0; info->argv && info->argv[i]; i++)
+		for (index = 0; info->argv && info->argv[index]; index++)
 			;
-		info->argc = i;
+		info->argc = index;
 
 		replace_alias(info);
 		replace_vars(info);

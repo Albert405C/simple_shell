@@ -13,7 +13,7 @@ int build_history_list(info_t *info, char *buffer, int line_count)
 
 	if (info->history)
 		nnode = info->history;
-	add_node_end(&node, buffer, line_count);
+	add_node_end(&nnode, buffer, line_count);
 
 	if (!info->history)
 		info->history = nnode;
