@@ -61,16 +61,16 @@ typedef struct liststr
  *@err_num: the error code for exit()s
  *@linecount_flag: if on count this line
  *@fname: the program filename
- *@env: linked list local copy 
- *@environ: custom modified copy of environ 
+ *@env: linked list local copy
+ *@environ: custom modified copy of environ
  *@history: the history
- *@alias: the alias 
+ *@alias: the alias
  *@env_changed: if environ was changed
  *@status: the return status of the last e
- *@cmd_buf: address of pointer to cmd_buf, 
- *@cmd_buf_type: 
- *@readfd: 
- *@histcount: the history line 
+ *@cmd_buf: address of pointer to cmd_buf,
+ *@cmd_buf_type: command buffer type
+ *@readfd: read file descriptor
+ *@histcount: the history line
  */
 typedef struct passinfo
 {
@@ -89,7 +89,7 @@ typedef struct passinfo
 	int env_changed;
 	int status;
 
-	char **cmd_buf; 
+	char **cmd_buf;
 	int cmd_buf_type;
 	int readfd;
 	int histcount;
