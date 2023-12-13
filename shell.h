@@ -131,6 +131,10 @@ int _eputchar(char);
 int _putfd(char c, int fd);
 int _putsfd(char *str, int fd);
 
+ssize_t read_buf(info_t *info, char *buffer, size_t *size);
+ssize_t input_buf(info_t *info, char **buf, size_t *len);
+int print_alias(list_t *node);
+int set_alias(info_t *info, char *str);
 
 int _strlen(char *);
 int _strcmp(char *, char *);
