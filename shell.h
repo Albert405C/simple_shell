@@ -125,11 +125,7 @@ char *find_path(info_t *, char *, char *);
 
 int loophsh(char **);
 
-void _eputs(const char* str);
-void _eputchar(char c);
-void populate_env_list(info_t* info);
-void read_history(info_t* info);
-void hsh(info_t* info, char** av);
+
 
 
 void _eputs(char *);
