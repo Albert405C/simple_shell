@@ -1,7 +1,8 @@
 #include "shell.h"
 
 /**
- * is_chain - Determines if the current character in the buffer is a chain delimiter
+ * is_chain - Determines if the current character in
+ * the buffer is a chain delimiter
  * @info: Parameter struct containing shell information
  * @buf: Character buffer
  * @p: Address of the current position in buf
@@ -42,11 +43,11 @@ int is_chain(info_t *info, char *buf, size_t *p)
  * @buf: Character buffer
  * @p: Address of the current position in buf
  * @start: Starting position in buf
- * @length: Length of buf
+ * @len: Length of buf
  *
  * Return: Void
  */
-void check_chain(info_t *info, char *buf, size_t *p, size_t start, size_t length)
+void check_chain(info_t *info, char *buf, size_t *p, size_t start, size_t len)
 {
 	size_t index = *p;
 
@@ -55,7 +56,7 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t start, size_t length
 		if (info->status)
 		{
 			buf[start] = 0;
-			index = length;
+			index = len;
 		}
 	}
 	if (info->cmd_buf_type == CMD_OR)
@@ -63,7 +64,7 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t start, size_t length
 		if (!info->status)
 		{
 			buf[start] = 0;
-			index = length;
+			index = len;
 		}
 	}
 
